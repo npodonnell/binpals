@@ -14,12 +14,10 @@ unsigned int reverse(register unsigned int x)
     x = (((x & 0xf0f0f0f0) >> 4) | ((x & 0x0f0f0f0f) << 4));
     x = (((x & 0xff00ff00) >> 8) | ((x & 0x00ff00ff) << 8));
     return((x >> 16) | (x << 16));
-
 }
 
 int main() {
-	
-	int np=0,nba=0,nbb=0,nbah=0,nbbh=0,i;
+    int np=0,nba=0,nbb=0,nbah=0,nbbh=0,i;
     unsigned x,a,b,ah,bh,ahr,bhr,am,bm;
 
     
@@ -104,7 +102,7 @@ int main() {
 			case 1: np++; continue;
 			case 2:
 			
-				if (a<=3 && b>=3)
+				if (b>=3)
 					np++;
 					
 					continue;
